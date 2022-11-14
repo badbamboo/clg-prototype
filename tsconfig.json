@@ -1,0 +1,59 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "types": ["jest", "node"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "paths": {
+      "@server/*": [
+        "src/*"
+      ],
+      "@component": [
+        "src/component/index"
+      ],
+      "@configuration": [
+        "src/configuration/index"
+      ],
+      "@component/*": [
+        "src/component/*"
+      ],
+      "@model": [
+        "src/model/index"
+      ],
+      "@service/*": [
+        "src/service/*"
+      ],
+      "@service": [
+        "src/service/index"
+      ],
+      "@utility": [
+        "src/component/utility/index"
+      ],
+      "@utility/*": [
+        "src/component/utility/*"
+      ]
+    },
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false
+  },
+  "include": [
+    "./src"
+  ]
+}

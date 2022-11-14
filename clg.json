@@ -1,0 +1,24 @@
+{
+	"appId": "clg-prototype",
+	"appUrl": "http://localhost:10200",
+	"appVersion": "0.0.1",
+	"descriptions": [],
+	"environment": "",
+	"inventory": [],
+	"languages": [
+		{
+			"name": "nestjs",
+			"version": "8.1.1"
+		},
+		{
+			"name": "nodejs",
+			"version": "16.10.0"
+		},
+		{
+			"name": "typescript",
+			"version": "4.6.2"
+		}
+	],
+	"port": 10200,
+	"tags": []
+}

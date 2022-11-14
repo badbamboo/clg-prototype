@@ -1,0 +1,17 @@
+{
+	"device": {
+		"mac": {
+			"key": "mac",
+			"value": 11
+		},
+		"serial": {
+			"key": "serial",
+			"value": 12
+		}
+	},
+	"fileRemoveTmpl": "rm -rf <%= key %>",
+	"filePathTmpl": "<%= cwd() %>/<%= path %>",
+	"lang": "eng",
+	"splitLine": " ",
+	"splitText": "\n"
+}

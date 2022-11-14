@@ -1,0 +1,50 @@
+{
+	"config": {
+		"path": "/config",
+		"action": "GET",
+		"input": "any",
+		"output": "Clg_Config"
+	},
+	"connect": {
+		"path": "/connect",
+		"action": "POST",
+		"input": "Clg_Connect_Request",
+		"output": "Clg_Connect_Response"
+	},
+	"email": {
+		"path": "/email",
+		"action": "POST",
+		"input": "any",
+		"output": "any"
+	},
+	"log": {
+		"path": "/log",
+		"action": "POST",
+		"input": "Clg_Log",
+		"output": "Clg_Log"
+	},
+	"message": {
+		"path": "/message",
+		"action": "POST",
+		"input": "any",
+		"output": "any"
+	},
+	"scan": {
+		"path": "/scan",
+		"action": "POST",
+		"input": "any",
+		"output": "any"
+	},
+	"scanned_file": {
+		"path": "/scanned/file",
+		"action": "POST",
+		"input": "any",
+		"output": "any"
+	},
+	"status": {
+		"path": "/status",
+		"action": "GET",
+		"input": "any",
+		"output": "Clg_Status_Response"
+	}
+}

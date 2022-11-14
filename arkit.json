@@ -1,0 +1,21 @@
+{
+    "$schema": "https://arkit.js.org/schema.json",
+    "excludePatterns": ["test/**", "tests/**", "**/*.test.*", "**/*.spec.*"],
+    "output": [
+      {
+        "path": "public/dept-chart.svg"
+      },{
+        "path": "public/dept-chart.png",
+        "groups": [
+          {
+            "first": true,
+            "components": ["Component"]
+          },
+          {
+            "type": "Dependencies",
+            "components": ["Dependency"]
+          }
+        ]
+      }
+    ]
+  }

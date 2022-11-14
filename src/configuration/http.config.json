@@ -1,0 +1,26 @@
+{
+	"!meta": {
+		"references": []
+	},
+	"code200": {
+		"code": 200,
+		"message": "<%= val %>",
+		"level": "success"
+	},
+	"code202": {
+		"code": 202,
+		"message": "<%= val %>",
+		"level": "info"
+	},
+	"code400": {
+		"code": 400,
+		"message": "400 Bad Request: The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing). <%= stack%>",
+		"level": "error"
+	},
+	"code500": {
+		"code": 500,
+		"hasError": true,
+		"message": "500 Internal Server Error: The server has encountered a situation it does not know how to handle. <%= stack %> <%= val%>",
+		"level": "error"
+	}
+}
