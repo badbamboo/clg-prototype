@@ -35,11 +35,24 @@ $ make app-serve
 
 > NOTE: Steps can be manually done by copying commands located in [Makefile](./Makefile)
 
+## Documentation
+Running documentation command will init the web server.
+```
+$ make app-documentation
+```
+> Add test coverage documentation by running the command below.
+```
+$ make app-test
+```
 ## View Application
 - Angular: http://localhost:10200/a/angular
-- React: http://localhost:10200/a/react
+- Depth Chart: http://localhost:10200/a/dept-chart.svg
+![alt text](./image/depth.png "dept-chart")
 - Documentation: http://localhost:10200/a/doc
+![alt text](./image/docs.png "documentation")
+- React: http://localhost:10200/a/react
 - Test Coverage: http://localhost:10200/a/coverage/
+![alt text](./image/coverage.png "test coverage")
 
 ## Frameworks / Tools
 - [Angular](https://angular.io/)

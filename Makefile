@@ -54,7 +54,6 @@ app-tag:
 	git tag -d $(APP_VERSION)
 
 app-test:
-	rm -rf public/jest-stare
 	npm run test:cov; mv jest-stare public/; mv test-report.html public/coverage/index.html
 ################################################################	
 # CMDS: UTILITIES
