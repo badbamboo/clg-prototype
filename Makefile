@@ -2,12 +2,14 @@ parent_dir		:= $(abspath $(makefile_dir)/..)
 ENVIRONMENT		?= dev
 export
 
-CLG			:= $(PWD)/clg.json
-APP_ID 		:= $(shell jq -r '.name' package.json)
-APP_PORT	:= $(shell jq -r '.port' $(CLG))
+CLG				:= $(PWD)/clg.json
+APP_ID 			:= $(shell jq -r '.name' package.json)
+APP_PORT		:= $(shell jq -r '.port' $(CLG))
 APP_VERSION 	:= 	$(shell jq -r '.version' package.json)
 NPM_REGISTRY	:= https://registry.npmjs.org/
-SERVER_PORT		:= $(shell lsof -i :$(APP_PORT) | cut -d' ' -f5)
+PID				:= $(shell lsof -i :$(APP_PORT) | cut -d' ' -f2)
+DOCKER_NAME		:= $(APP_ID)/$(APP_VERSION)
+DOCKER_ID	:= $(shell docker images 'clg-prototype/0.0.2' -a -q)
 ################################################################
 # CMDS: APP
 ################################################################
@@ -27,6 +29,19 @@ app-conf:
 	@echo "APP_PORT: $(APP_PORT)"
 	@echo "APP_VERSION: $(APP_VERSION)"
 
+app-docker-build:
+	docker build -t $(DOCKER_NAME) . 
+
+app-docker-remove:
+	@echo "DOCKER_NAME: $(DOCKER_NAME)"
+	@echo "DOCKER_ID: $(DOCKER_ID)"
+	docker container stop $(DOCKER_ID)
+	docker rm -f $(DOCKER_ID)
+
+app-docker-up:
+	docker run -p$(APP_PORT):$(APP_PORT)  --name $(DOCKER_ID) $(DOCKER_NAME)
+	make app-docker-remove > /dev/null &
+
 app-documentation:
 	@rm -rf public/*
 	@npx arkit
@@ -41,9 +56,8 @@ app-init:
 	@npm i --save lodash --legacy-peer-deps
 
 app-kill:
-	lib-kill: 
 	lsof -i :$(APP_PORT)
-	kill -9 $(SERVER_PORT)
+	kill -9 $(PID)
 	
 app-serve:
 	@npm run start:$(ENVIRONMENT)

@@ -1,6 +1,6 @@
 {
   "name": "clg-prototype",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "author": "",
   "private": true,
@@ -10,7 +10,7 @@
     "build": "nest build",
     "compodoc": "npx compodoc -p tsconfig.doc.json --output=public/doc/",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
+    "start": "node dist/main.js",
     "start:main": "nest start --watch",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",

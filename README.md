@@ -23,7 +23,9 @@ WHAT IS THE GOAL?
 $ git clone <repo>
 $ cd <repo>
 $ make app-init
-$ make app-dodker
+$ bump
+$ make app-docker-build
+$ make app-docker-up
 ```
 > Running locally as developer
 ```

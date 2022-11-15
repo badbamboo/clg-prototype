@@ -24,23 +24,6 @@ describe('AppService', () => {
 	});
 
 	it('appJson should be defined', () => {
-		console.log('___________appJson', appJson)
 		expect(appJson.appId).toBeDefined();
 	});
-
-	// it('should return getRubiconJson()', () => {
-	// 	const json = service.getRubiconJson();
-	// 	expect(json.appId).toEqual(json.appId);
-	// 	expect(json.environment).toEqual(json.environment);
-	// });
-
-	// it('should return init()', async () => {
-	// 	const json = service.getRubiconJson();
-	// 	const app: NestExpressApplication = await NestFactory.create<NestExpressApplication>(AppModule);
-	// 	app.enableCors({ origin: true });
-	// 	service.init(app, 10300).then((res: Rubicon_Configuration) => {
-	// 		expect(res.appId).toEqual(json.appId);
-	// 		expect(res.environment).toEqual(json.environment);
-	// 	});
-	// });
 });
