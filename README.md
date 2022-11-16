@@ -2,8 +2,18 @@
 ## Description
 WHAT DOES THE APPLICATION DO?
 
-- Allows user to upload an image of a device's MAC ID & Serial Number. 
-- Returns MAC & Serial as text
+- Allow user to upload an image of a device's MAC ID & Serial Number. 
+- Return details as text
+```
+{
+  "mac": ["EC1A5977D924"],
+  "serialNo": ["221302K01013EA"],
+  "path": "public/image_scan/b4955ed627b3f815fbcfd9785389974d",
+  "text": "die .\n/ belkin.\nfwemo [ oo ID:WeMo 3EA\nLR 2\nSerial No 221302K01013EA foy\n0 00 ik\nMAC EC1A5977D924 i\n"
+}
+```
+> From image:
+![alt text](./image/mac1.png "dept-chart")
 
 WHAT IS THE GOAL?
 
@@ -12,25 +22,26 @@ WHAT IS THE GOAL?
 1. ✓ Demonstrate the implementation of controllers, modules, and services
 1. Demonstrate the implementation unit testing
 1. ✓ Demonstrate the implementation of functional REST API 
-1. Demonstrate the implementation React UI
-1. Demonstrate the implementation Angular UI
+1. Demonstrate the implementation of User Iterface:
+    - Angular
+    - React
 1. ✓ Demonstrate the implementation usage of Makefile
-1. Demonstrate the implementation usage of Docker container
+1. ✓ Demonstrate the implementation usage of Docker container
 
 ## Getting Started
 > Running locally in Docker
 ```
 $ git clone <repo>
 $ cd <repo>
-$ make app-init
-$ bump
 $ make app-docker-build
 $ make app-docker-up
+$ make app-docker-remove
 ```
 > Running locally as developer
 ```
 $ git clone <repo>
 $ cd <repo>
+$ make app-init
 $ make app-build
 $ make app-serve
 ```

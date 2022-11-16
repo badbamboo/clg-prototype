@@ -23,7 +23,7 @@ app-build:
 app-bump:
 	@bump
 
-app-conf: 
+app-config: 
 	@echo "CLG: $(CLG)"
 	@echo "APP_ID: $(APP_ID)"
 	@echo "APP_PORT: $(APP_PORT)"
