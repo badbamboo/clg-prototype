@@ -20,11 +20,7 @@ WHAT IS THE GOAL?
 1. ✓ Demonstrate the implementation of NestJS server
 1. ✓ Demonstrate the implementation of OCR [tesseract.js](https://github.com/naptha/tesseract.js) plugin
 1. ✓ Demonstrate the implementation of controllers, modules, and services
-1. Demonstrate the implementation unit testing
 1. ✓ Demonstrate the implementation of functional REST API 
-1. Demonstrate the implementation of User Iterface:
-    - Angular
-    - React
 1. ✓ Demonstrate the implementation usage of Makefile
 1. ✓ Demonstrate the implementation usage of Docker container
 
